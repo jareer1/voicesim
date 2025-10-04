@@ -9,10 +9,10 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "dev:sockets": "cd apps/sim && bun run dev:sockets",
-    "dev:full": "cd apps/sim && bun run dev:full",
+    "build": "node init && turbo run build",
+    "dev": "node init && turbo run dev",
+    "dev:sockets": "node init && cd apps/sim && bun run dev:sockets",
+    "dev:full": "node init && cd apps/sim && bun run dev:full",
     "test": "turbo run test",
     "format": "bunx biome format --write .",
     "format:check": "bunx biome format .",
